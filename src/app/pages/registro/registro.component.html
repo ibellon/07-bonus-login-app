@@ -1,7 +1,8 @@
 <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
-                <form (ngSubmit)="onSubmit()" 
+                <form (ngSubmit)="onSubmit(registroForm)" 
+                    #registroForm="ngForm"
                     class="login100-form validate-form flex-sb flex-w">
     
                     <span class="login100-form-title p-b-51">
@@ -11,11 +12,12 @@
                     <!-- <span class="text-danger">El correo es obligatorio</span> -->
                     <div class="wrap-input100 m-b-16">
                         <input class="input100" 
-                               type="text" 
+                               type="email" 
                                name="email"
+                               required
+                               email
                                [(ngModel)]="usuario.email" 
                                placeholder="Email">
-    
                         <span class="focus-input100"></span>
                     </div>
 
@@ -23,10 +25,11 @@
                     <div class="wrap-input100 m-b-16">
                         <input class="input100" 
                                type="text" 
-                               name="nombre" 
+                               name="nombre"
+                               minlength="2"
+                               required 
                                [(ngModel)]="usuario.nombre" 
                                placeholder="Nombre y apellidos">
-    
                         <span class="focus-input100"></span>
                     </div>
                     
@@ -34,8 +37,10 @@
                     <div class="wrap-input100 m-b-16" data-validate = "Password is required">
                         <input class="input100"
                                type="password" 
-                               name="pass" 
-                               [(ngModel)]="usuario.password" 
+                               name="password" 
+                               [(ngModel)]="usuario.password"
+                               minlength="6"
+                               required
                                placeholder="Password">
                         <span class="focus-input100"></span>
                     </div>
