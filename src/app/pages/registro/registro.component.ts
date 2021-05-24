@@ -16,7 +16,6 @@ export class RegistroComponent implements OnInit {
   ngOnInit() { 
 
     this.usuario = new UsuarioModel();
-    this.usuario.email = "isidro.bellon@gmail.com";
 
   }
 
@@ -25,7 +24,7 @@ export class RegistroComponent implements OnInit {
     if(form.invalid) {
       return;
     }
-    
+
     console.log("Envío del Usuario: ",this.usuario);
     console.log("Formulario: ", form);
   }
