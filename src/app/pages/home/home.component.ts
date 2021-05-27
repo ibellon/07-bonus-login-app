@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   salir() {
+    console.log("SALIENDO");
     this.auth.logout();
     this.router.navigateByUrl("/login");
   }

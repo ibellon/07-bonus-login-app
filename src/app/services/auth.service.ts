@@ -34,7 +34,7 @@ export class AuthService {
       authData).pipe(
         map( resp => {
           console.log("Entró en el map del RXJS");
-          this.guardarToken(resp['idToken'])
+          this.guardarToken(resp['idToken']);
           return resp;
         })
       );
@@ -54,7 +54,7 @@ export class AuthService {
       authData).pipe(
         map( resp => {
           console.log("Entró en el map del RXJS");
-          this.guardarToken(resp['idToken'])
+          this.guardarToken(resp['idToken']);
           return resp;
         })
       );
